@@ -277,7 +277,7 @@ def sendMention(to, mid, firstmessage):
         timeNow = datetime.now(tz=tz)
         eltime = time.time() - mulai
         bot = runtime(eltime)
-        text += mention+"™↔ Jam : "+datetime.strftime(timeNow,'%H:%M:%S')+" Wib\n™↔ Group : "+str(len(gid))+"\n™↔ Teman : "+str(len(teman))+"\n™↔ Expired : In "+hari+"\n™↔ Version : Saints Bot\n™↔ Tanggal : "+datetime.strftime(timeNow,'%Y-%m-%d')+"\n™↔ Runtime : \n • "+bot
+        text += mention+"Jam : "+datetime.strftime(timeNow,'%H:%M:%S')+" Wib\nGroup : "+str(len(gid))+"\nTeman : "+str(len(teman))+"\nExpired : In "+hari+"\nVersion : Janda mudah\nTanggal : "+datetime.strftime(timeNow,'%Y-%m-%d')+"\nRuntime : \n • "+bot
         cl.sendMessage(to, text, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
     except Exception as error:
         cl.sendMessage(to, "[ INFO ] Error :\n" + str(error))
@@ -294,12 +294,12 @@ def help():
     key = Setmain["keyCommand"]
     key = key.title()
     helpMessage = "╔══════════════" + "\n" + \
-                  "║              􂘁􀄋K􏿿􂘁􀄒R􏿿􂘁􀄉I􏿿􂘁􀄓S􏿿􂘁􀄓S􏿿" + "\n" + \
+                  "║    Galank Bots􏿿" + "\n" + \
                   "╠══════════════" + "\n" + \
                   "╚═╗" + "\n" + \
                   "  ╠➣ [ Help Message ]" + "\n" + \
                   "╔═╝" + "\n" + \
-                  "\n╠➣ Gunakan「 " + key + " 」di depannya\n\n" + \
+                  "╠➣ Gunakan「 " + key + " 」\n" + \
                   "╠➣ " + key + "Me\n" + \
                   "╠➣ " + key + "Mid「@」\n" + \
                   "╠➣ " + key + "Info「@」\n" + \
@@ -339,60 +339,74 @@ def help():
                   "╚═╗" + "\n" + \
                   "  ╠➣ [ Hiburan Command ]" + "\n" + \
                   "╔═╝" + "\n" + \
-                  "\n╠➣   Gunakan「 " + key + " 」di depannya\n\n" + \
-                  "™↔ " + key + "ID line:「Id Line nya」\n" + \
-                  "™↔ " + key + "Sholat:「Nama Kota」\n" + \
-                  "™↔ " + key + "Cuaca:「Nama Kota」\n" + \
-                  "™↔ " + key + "Lokasi:「Nama Kota」\n" + \
-                  "™↔ " + key + "Music:「Judul Lagu」\n" + \
-                  "™↔ " + key + "Lirik:「Judul Lagu」\n" + \
-                  "™↔ " + key + "Ytmp3:「Judul Lagu」\n" + \
-                  "™↔ " + key + "Ytmp4:「Judul Video」\n" + \
-                  "™↔ " + key + "Profileig:「Nama IG」\n" + \
-                  "™↔ " + key + "Cekdate:「tgl-bln-thn」\n" + \
-                  "™↔ " + key + "Jumlah:「angka」\n" + \
-                  "™↔ " + key + "Spamtag「@」\n" + \
-                  "™↔ " + key + "Spamcall:「jumlahnya」\n" + \
-                  "™↔ " + key + "Spamcall\n" + \
-                  "\n™[ Selfbot Protection ]™\n   Jangan gunakan「 " + key + " 」di depannya\n\n" + \
-                  "™↔ " + key + "Notag「on/off」\n" + \
-                  "™↔ " + key + "Semuapro「on/off」\n" + \
-                  "™↔ " + key + "Protecturl「on/off」\n" + \
-                  "™↔ " + key + "Protectjoin「on/off」\n" + \
-                  "™↔ " + key + "Protectkick「on/off」\n" + \
-                  "™↔ " + key + "Protectcancel「on/off」\n" + \
-                  "\n™[ Selfbot Settings ]™\n   Jangan gunakan「 " + key + " 」di depannya\n\n" + \
-                  "™↔ " + key + "Sticker「on/off」\n" + \
-                  "™↔ " + key + "Respon「on/off」\n" + \
-                  "™↔ " + key + "Contact「on/off」\n" + \
-                  "™↔ " + key + "Autojoin「on/off」\n" + \
-                  "™↔ " + key + "Autoadd「on/off」\n" + \
-                  "™↔ " + key + "Welcome「on/off」\n" + \
-                  "™↔ " + key + "Autoleave「on/off」\n" + \
-                  "\n™[ Selfbot Admin ]™\n    Jangan gunakan「 " + key + " 」di depannya\n\n" + \
-                  "™↔ " + key + "Admin:on\n" + \
-                  "™↔ " + key + "Admin:repeat\n" + \
-                  "™↔ " + key + "Staff:on\n" + \
-                  "™↔ " + key + "Staff:repeat\n" + \
-                  "™↔ " + key + "Bot:on\n" + \
-                  "™↔ " + key + "Bot:repeat\n" + \
-                  "™↔ " + key + "Adminadd「@」\n" + \
-                  "™↔ " + key + "Admindell「@」\n" + \
-                  "™↔ " + key + "Staffadd「@」\n" + \
-                  "™↔ " + key + "Staffdell「@」\n" + \
-                  "™↔ " + key + "Botadd「@」\n" + \
-                  "™↔ " + key + "Botdell「@」\n" + \
-                  "™↔ " + key + "Refresh\n" + \
-                  "™↔ " + key + "Listbot\n" + \
-                  "™↔ " + key + "Listadmin\n" + \
-                  "™↔ " + key + "Listprotect\n" + \
-                  "\nKetik「 Refresh 」Setelah\nmenggunakan command...\n"
+                  "╠➣   Gunakan「 " + key + " 」\n" + \
+                  "╠➣ " + key + "ID line:「Id Line nya」\n" + \
+                  "╠➣ " + key + "Sholat:「Nama Kota」\n" + \
+                  "╠➣ " + key + "Cuaca:「Nama Kota」\n" + \
+                  "╠➣ " + key + "Lokasi:「Nama Kota」\n" + \
+                  "╠➣ " + key + "Music:「Judul Lagu」\n" + \
+                  "╠➣ " + key + "Lirik:「Judul Lagu」\n" + \
+                  "╠➣ " + key + "Ytmp3:「Judul Lagu」\n" + \
+                  "╠➣ " + key + "Ytmp4:「Judul Video」\n" + \
+                  "╠➣ " + key + "Profileig:「Nama IG」\n" + \
+                  "╠➣ " + key + "Cekdate:「tgl-bln-thn」\n" + \
+                  "╠➣ " + key + "Jumlah:「angka」\n" + \
+                  "╠➣ " + key + "Spamtag「@」\n" + \
+                  "╠➣ " + key + "Spamcall:「jumlahnya」\n" + \
+                  "╠➣ " + key + "Spamcall\n" + \
+                  "╚═╗" + "\n" + \
+                  "  ╠➣ [ Protect Command ]" + "\n" + \
+                  "╔═╝" + "\n" + \
+                  "╠➣ Jangan gunakan「 " + key + " 」\n" + \
+                  "╠➣ " + key + "Notag「on/off」\n" + \
+                  "╠➣ " + key + "Semuapro「on/off」\n" + \
+                  "╠➣ " + key + "Protecturl「on/off」\n" + \
+                  "╠➣ " + key + "Protectjoin「on/off」\n" + \
+                  "╠➣ " + key + "Protectkick「on/off」\n" + \
+                  "╠➣ " + key + "Protectcancel「on/off」\n" + \
+                  "╚═╗" + "\n" + \
+                  "  ╠➣ [ Settings Command ]" + "\n" + \
+                  "╔═╝" + "\n" + \
+                  "╠➣   Jangan gunakan「 " + key + " 」\n" + \
+                  "╠➣ " + key + "Sticker「on/off」\n" + \
+                  "╠➣ " + key + "Respon「on/off」\n" + \
+                  "╠➣ " + key + "Contact「on/off」\n" + \
+                  "╠➣ " + key + "Autojoin「on/off」\n" + \
+                  "╠➣ " + key + "Autoadd「on/off」\n" + \
+                  "╠➣ " + key + "Welcome「on/off」\n" + \
+                  "╠➣ " + key + "Autoleave「on/off」\n" + \
+                  "╚═╗" + "\n" + \
+                  "  ╠➣ [ Admin Command ]" + "\n" + \
+                  "╔═╝" + "\n" + \
+                  "╠➣    Jangan gunakan「 " + key + " 」\n" + \
+                  "╠➣ " + key + "Admin:on\n" + \
+                  "╠➣ " + key + "Admin:repeat\n" + \
+                  "╠➣ " + key + "Staff:on\n" + \
+                  "╠➣ " + key + "Staff:repeat\n" + \
+                  "╠➣ " + key + "Bot:on\n" + \
+                  "╠➣ " + key + "Bot:repeat\n" + \
+                  "╠➣ " + key + "Adminadd「@」\n" + \
+                  "╠➣ " + key + "Admindell「@」\n" + \
+                  "╠➣ " + key + "Staffadd「@」\n" + \
+                  "╠➣ " + key + "Staffdell「@」\n" + \
+                  "╠➣ " + key + "Botadd「@」\n" + \
+                  "╠➣ " + key + "Botdell「@」\n" + \
+                  "╠➣ " + key + "Refresh\n" + \
+                  "╠➣ " + key + "Listbot\n" + \
+                  "╠➣ " + key + "Listadmin\n" + \
+                  "╠➣ " + key + "Listprotect\n" + \
+                  "╚════════════════════╝\n" + \
+                  "Ketik「 Refresh 」jika sudah command\n"
     return helpMessage
 
 def helpbot():
     key = Setmain["keyCommand"]
     key = key.title()
-    helpMessage1 = "™[ Selfbot Blacklist ]™\n   Jangan gunakan「 " + key + " 」di depannya\n\n" + \
+    helpMessage1 = "╠══════════════" + "\n" + \
+                   "╚═╗" + "\n" + \
+                   "  ╠➣ [ Blacklist command ]" + "\n" + \
+                   "╔═╝" + "\n" + \
+                  ™[ Selfbot Blacklist ]™\n   Jangan gunakan「 " + key + " 」di depannya\n\n" + \
                   "™↔ " + key + "Blc\n" + \
                   "™↔ " + key + "Ban:on\n" + \
                   "™↔ " + key + "Unban:on\n" + \
