@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*- 
-import linepy
-from linepy import *
+import LINEPY
+from LINEPY import *
 from akad.ttypes import *
 from multiprocessing import Pool, Process
 from time import sleep
@@ -10,37 +10,37 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 import youtube_dl
 
-cl = linepy(authToken='EpKRMvwu9eBKS3IK8ivc.sVCqTiIkfujwHVOznKXlla.ZUoCVYRNMm9czWD9RdSZA64LXi8qV+KBspTn6nIxyPE=')
+cl = LineClient(authToken='Tokenmu kampret')
 cl.log("Auth Token : " + str(cl.authToken))
 channel = LineChannel(cl)
 cl.log("Channel Access Token : " + str(channel.channelAccessToken))
 
-ki = linepy(authToken='EpVWlpYYD1pYL5yGEJI1.VZq819K+MTjFp7EJL7DGCq.TPURLoZWVJOYtDcPMBnVvCsoPc2NNnhxVQjq45TBQ14=')
+ki = LineClient(authToken='Tokenmu kampret')
 ki.log("Auth Token : " + str(ki.authToken))
 channel1 = LineChannel(ki)
 ki.log("Channel Access Token : " + str(channel1.channelAccessToken))
 
-kk = linepy(authToken='EpDU06Uy9J24U81UiGO4.fG185DzpN/oBUhOUTcrLfa.ZM9KnvNqWHs/HCfYDWDxTSGVM7e5vCCdl64RKRw9ZZE=')
+kk = LineClient(authToken'Tokenmu kampret')
 kk.log("Auth Token : " + str(kk.authToken))
 channel2 = LineChannel(kk)
 kk.log("Channel Access Token : " + str(channel2.channelAccessToken))
 
-kc = linepy(authToken='EpBZ26TLJwUQ16hx8af5.JFqPWmGNQCrnZwiG3a94vq.dn3X8CYFlhwkNKYtGGPSIPcaa58J57gFu81UWgl8a5o=')
+kc = LineClient(authToken='Tokenmu kampret')
 kc.log("Auth Token : " + str(kc.authToken))
 channel3 = LineChannel(kc)
 kc.log("Channel Access Token : " + str(channel3.channelAccessToken))
 
-sw = linepy(authToken='Epb3mJhX70IDASJeqcza.fdZ3mfXjEHiMPpSnvvUW/G.IUmH6xliKXmbV8xVBpsiWvfwcYkIKHuueGeRhVmT8Ps=')
+sw = LineClient(authToken='Tokenmu kampret')
 sw.log("Auth Token : " + str(sw.authToken))
-channel11 = LineChannel(sw)
-sw.log("Channel Access Token : " + str(channel11.channelAccessToken))
+channel4 = LineChannel(sw)
+sw.log("Channel Access Token : " + str(channel4.channelAccessToken))
 
 poll = LinePoll(cl)
 call = LineCall(cl)
-creator = ["u02aea92a3d7e44f587e7a91141e78b59"]
-owner = ["u02aea92a3d7e44f587e7a91141e78b59"]
-admin = ["u4af710b4888a15425686fa19364c4b2c"]
-staff = ["u4af710b4888a15425686fa19364c4b2c"]
+creator = ["Mid Kamu"]
+owner = ["Mid kamu"]
+admin = ["Mid kamu"]
+staff = ["Mid Kamu"]
 mid = cl.getProfile().mid
 Amid = ki.getProfile().mid
 Bmid = kk.getProfile().mid
@@ -49,7 +49,7 @@ Zmid = sw.getProfile().mid
 KAC = [cl,ki,kk,kc]
 ABC = [ki,kk,kc]
 Bots = [mid,Amid,Bmid,Cmid,Zmid]
-Saints = admin + staff
+Goblok = admin + staff
 
 protectqr = []
 protectkick = []
@@ -121,11 +121,11 @@ wait = {
     "welcomeOn":False,
     "sticker":False,
     "selfbot":True,
-    "mention":"Masuk kk jan malu malu suee..😜",
-    "Respontag":"Jangan sering sering tag tq..😁 ",
+    "mention":"Masuk pea gak usah sok polos..😜",
+    "Respontag":"ini anak goblok benar,tag mulu..😁 ",
     "welcome":"Wellcome to my Fams",
-    "comment":"Auto like By CxB team",
-    "message":"Thanks add me🙏\n™CxB team™\n\nOpen Order:\n™↔ 1 Sb + 3 assist\n™↔ 1 Sb + 5 assist\n\nMinat?\nCpc bouuusss...",
+    "comment":"Auto like By TΣΔM SLΔCҜβΩT",
+    "message":"Nah ketahuan diam² fans am gwa",
     }
 
 read = {
@@ -293,44 +293,53 @@ def command(text):
 def help():
     key = Setmain["keyCommand"]
     key = key.title()
-    helpMessage = "™[ Selfbot Menu ]™\n   Gunakan「 " + key + " 」di depannya\n\n" + \
-                  "™↔ " + key + "Me\n" + \
-                  "™↔ " + key + "Mid「@」\n" + \
-                  "™↔ " + key + "Info「@」\n" + \
-                  "™↔ " + key + "Nk「@」\n" + \
-                  "™↔ " + key + "Kick1「@」\n" + \
-                  "™↔ " + key + "Mybot\n" + \
-                  "™↔ " + key + "Status\n" + \
-                  "™↔ " + key + "About\n" + \
-                  "™↔ " + key + "Restart\n" + \
-                  "™↔ " + key + "Runtime\n" + \
-                  "™↔ " + key + "Creator\n" + \
-                  "™↔ " + key + "Speed/Sp\n" + \
-                  "™↔ " + key + "Sprespon\n" + \
-                  "™↔ " + key + "Tagall\n" + \
-                  "™↔ " + key + "Joinall\n" + \
-                  "™↔ " + key + "Byeall\n" + \
-                  "™↔ " + key + "Byeme\n" + \
-                  "™↔ " + key + "Leave「Namagrup」\n" + \
-                  "™↔ " + key + "Ginfo\n" + \
-                  "™↔ " + key + "Open\n" + \
-                  "™↔ " + key + "Close\n" + \
-                  "™↔ " + key + "Url grup\n" + \
-                  "™↔ " + key + "Gruplist\n" + \
-                  "™↔ " + key + "Infogrup「angka」\n" + \
-                  "™↔ " + key + "Infomem「angka」\n" + \
-                  "™↔ " + key + "Remove chat\n" + \
-                  "™↔ " + key + "Lurking「on/off」\n" + \
-                  "™↔ " + key + "Lurkers\n" + \
-                  "™↔ " + key + "Sider「on/off」\n" + \
-                  "™ " + key + "Updatefoto\n" + \
-                  "™↔ " + key + "Updategrup\n" + \
-                  "™↔ " + key + "Updatebot\n" + \
-                  "™↔ " + key + "Broadcast:「Text」\n" + \
-                  "™↔ " + key + "Setkey「New Key」\n" + \
-                  "™↔ " + key + "Mykey\n" + \
-                  "™↔ " + key + "Resetkey\n" + \
-                  "\n ™[Selfbot Hiburan]™\n   Gunakan「 " + key + " 」di depannya\n\n" + \
+    helpMessage = "╔══════════════" + "\n" + \
+                  "║              􂘁􀄋K􏿿􂘁􀄒R􏿿􂘁􀄉I􏿿􂘁􀄓S􏿿􂘁􀄓S􏿿" + "\n" + \
+                  "╠══════════════" + "\n" + \
+                  "╚═╗" + "\n" + \
+                  "  ╠➣ [ Help Message ]" + "\n" + \
+                  "╔═╝" + "\n" + \
+                  "\n╠➣ Gunakan「 " + key + " 」di depannya\n\n" + \
+                  "╠➣ " + key + "Me\n" + \
+                  "╠➣ " + key + "Mid「@」\n" + \
+                  "╠➣ " + key + "Info「@」\n" + \
+                  "╠➣ " + key + "Nk「@」\n" + \
+                  "╠➣ " + key + "Kick1「@」\n" + \
+                  "╠➣ " + key + "Mybot\n" + \
+                  "╠➣ " + key + "Status\n" + \
+                  "╠➣ " + key + "About\n" + \
+                  "╠➣ " + key + "Restart\n" + \
+                  "╠➣ " + key + "Runtime\n" + \
+                  "╠➣ " + key + "Creator\n" + \
+                  "╠➣ " + key + "Speed/Sp\n" + \
+                  "╠➣ " + key + "Sprespon\n" + \
+                  "╠➣ " + key + "Tagall\n" + \
+                  "╠➣ " + key + "Joinall\n" + \
+                  "╠➣ " + key + "Byeall\n" + \
+                  "╠➣ " + key + "Byeme\n" + \
+                  "╠➣ " + key + "Leave「Namagrup」\n" + \
+                  "╠➣ " + key + "Ginfo\n" + \
+                  "╠➣ " + key + "Open\n" + \
+                  "╠➣ " + key + "Close\n" + \
+                  "╠➣ " + key + "Url grup\n" + \
+                  "╠➣ " + key + "Gruplist\n" + \
+                  "╠➣ " + key + "Infogrup「angka」\n" + \
+                  "╠➣ " + key + "Infomem「angka」\n" + \
+                  "╠➣ " + key + "Remove chat\n" + \
+                  "╠➣ " + key + "Lurking「on/off」\n" + \
+                  "╠➣ " + key + "Lurkers\n" + \
+                  "╠➣ " + key + "Sider「on/off」\n" + \
+                  "╠➣ " + key + "Updatefoto\n" + \
+                  "╠➣ " + key + "Updategrup\n" + \
+                  "╠➣ " + key + "Updatebot\n" + \
+                  "╠➣ " + key + "Broadcast:「Text」\n" + \
+                  "╠➣ " + key + "Setkey「New Key」\n" + \
+                  "╠➣ " + key + "Mykey\n" + \
+                  "╠➣ " + key + "Resetkey\n" + \
+                  "╚═╗" + "\n" + \
+                  "  ╠➣ [ Hiburan Command ]" + "\n" + \
+                  "╔═╝" + "\n" + \
+                  "\n╠➣   Gunakan「 " + key + " 」di depannya\n\n" + \
                   "™↔ " + key + "ID line:「Id Line nya」\n" + \
                   "™↔ " + key + "Sholat:「Nama Kota」\n" + \
                   "™↔ " + key + "Cuaca:「Nama Kota」\n" + \
@@ -397,7 +406,7 @@ def helpbot():
                   "™↔ " + key + "Talkbanlist\n" + \
                   "™↔ " + key + "Clearban\n" + \
                   "™↔ " + key + "Refresh\n" + \
-                  "\n™[ Selfbot Menu ]™\n    Gunakan「 " + key + " 」di depannya\n\n" + \
+                  "\n™[ Selfbot Menu ]™\n    Gunakan「 " + key + " 」di depannya\n" + \
                   "™↔ " + key + "Cek sider\n" + \
                   "™↔ " + key + "Cek spam\n" + \
                   "™↔ " + key + "Cek pesan \n" + \
