@@ -1083,7 +1083,7 @@ def bot(op):
                         cl.sendMessage(msg.to,"Berhasil menghapus dari anggota bot")
                     else:
                         wait["dellbots"] = True
-                        cl.sendMessage(msg.to,"Contact itu bukan anggota bot saints")
+                        cl.sendMessage(msg.to,"Contact itu bukan anggota bot goblok")
 #ADD STAFF
                  if msg._from in admin:
                   if wait["addstaff"] == True:
@@ -1229,7 +1229,7 @@ def bot(op):
                         return
                     else:
                         cmd = command(text)
-                        if cmd == "help":
+                        if cmd == "key":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                helpMessage = help()
@@ -1245,7 +1245,7 @@ def bot(op):
                                 wait["selfbot"] = False
                                 cl.sendText(msg.to, "Selfbot dinonaktifkan")
                                             
-                        elif cmd == "help2":
+                        elif cmd == "key2":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                helpMessage1 = helpbot()
@@ -1256,38 +1256,38 @@ def bot(op):
                             if msg._from in admin:
                                 tz = pytz.timezone("Asia/Jakarta")
                                 timeNow = datetime.now(tz=tz)
-                                md = "™[ Protect Settings ]™\n\n"
-                                if wait["sticker"] == True: md+="™ Sticker「on」\n"
-                                else: md+="™ Sticker「off」\n"
-                                if wait["contact"] == True: md+="™↔ Contact「on」\n"
-                                else: md+="™↔ Contact「off」\n"
-                                if wait["talkban"] == True: md+="™↔ Talkban「on」\n"
-                                else: md+="™↔ Talkban「off」\n"
-                                if wait["Mentionkick"] == True: md+="™↔ Notag「on」\n"
-                                else: md+="™↔ Notag「off」\n"
-                                if wait["detectMention"] == True: md+="™↔ Respon「on」"
-                                else: md+="™↔ Respon「off」\n"
-                                if wait["autoJoin"] == True: md+="™↔ Autojoin「on」\n"
-                                else: md+="™↔ Autojoin「off」\n"
+                                md = "[ Protect Settings ]\n\n"
+                                if wait["sticker"] == True: md+="● Sticker「on」\n"
+                                else: md+="● Sticker「off」\n"
+                                if wait["contact"] == True: md+="● Contact「on」\n"
+                                else: md+="● Contact「off」\n"
+                                if wait["talkban"] == True: md+="● Talkban「on」\n"
+                                else: md+="● Talkban「off」\n"
+                                if wait["Mentionkick"] == True: md+="● Notag「on」\n"
+                                else: md+="● Notag「off」\n"
+                                if wait["detectMention"] == True: md+="● Respon「on」"
+                                else: md+="● Respon「off」\n"
+                                if wait["autoJoin"] == True: md+="● Autojoin「on」\n"
+                                else: md+="● Autojoin「off」\n"
                                 if wait["autoAdd"] == True: md+="™↔ Autoadd「on」\n"
-                                else: md+="™↔ Autoadd「off」\n"
-                                if msg.to in welcome: md+="™↔ Welcome「on」\n"
-                                else: md+="™↔ Welcome「off」\n"
-                                if wait["autoLeave"] == True: md+="™↔ Autoleave「on」\n"
-                                else: md+="™↔ Autoleave「off」\n"
-                                if msg.to in protectqr: md+="™↔ Protecturl「on」\n"
-                                else: md+="™↔ Protecturl「off」\n"
-                                if msg.to in protectjoin: md+="™↔ Protectjoin「on」\n"
-                                else: md+="™↔ Protectjoin「off」\n"
-                                if msg.to in protectkick: md+="™↔ Protectkick「on」\n"
-                                else: md+="™↔ Protectkick「off」\n"
-                                if msg.to in protectcancel: md+="™↔ Protectcancel「on」\n"
-                                else: md+="™↔ Protectcancel「off」\n"
+                                else: md+="● Autoadd「off」\n"
+                                if msg.to in welcome: md+="● Welcome「on」\n"
+                                else: md+="● Welcome「off」\n"
+                                if wait["autoLeave"] == True: md+="● Autoleave「on」\n"
+                                else: md+="● Autoleave「off」\n"
+                                if msg.to in protectqr: md+="● Protecturl「on」\n"
+                                else: md+="● Protecturl「off」\n"
+                                if msg.to in protectjoin: md+="● Protectjoin「on」\n"
+                                else: md+="● Protectjoin「off」\n"
+                                if msg.to in protectkick: md+="● Protectkick「on」\n"
+                                else: md+="● Protectkick「off」\n"
+                                if msg.to in protectcancel: md+="● Protectcancel「on」\n"
+                                else: md+="● Protectcancel「off」\n"
                                 cl.sendMessage(msg.to, md+"\nTanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nJam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
 
                         elif cmd == "creator" or text.lower() == 'creator':
                             if msg._from in admin:
-                                cl.sendText(msg.to,"Creator CxB team") 
+                                cl.sendText(msg.to,"Creator ╠TΣΔM SLΔCҜβΩT") 
                                 ma = ""
                                 for i in creator:
                                     ma = cl.getContact(i)
@@ -2253,11 +2253,11 @@ def bot(op):
                                     vin = s.url
                                     hasil = ""
                                     title = "Judul [ " + vid.title + " ]"
-                                    author = '\n\n™↔ Author : ' + str(vid.author)
-                                    durasi = '\n™↔ Duration : ' + str(vid.duration)
-                                    suka = '\n™↔ Likes : ' + str(vid.likes)
-                                    rating = '\n™↔ Rating : ' + str(vid.rating)
-                                    deskripsi = '\n™↔ Deskripsi : ' + str(vid.description)
+                                    author = '\n\n● Author : ' + str(vid.author)
+                                    durasi = '\n● Duration : ' + str(vid.duration)
+                                    suka = '\n● Likes : ' + str(vid.likes)
+                                    rating = '\n● Rating : ' + str(vid.rating)
+                                    deskripsi = '\n● Deskripsi : ' + str(vid.description)
                                 cl.sendImageWithURL(msg.to, me)
                                 cl.sendAudioWithURL(msg.to, shi)
                                 cl.sendText(msg.to,title+ author+ durasi+ suka+ rating+ deskripsi)
@@ -2644,7 +2644,7 @@ def bot(op):
                                for x in key["MENTIONEES"]:
                                     targets.append(x["M"])
                                for target in targets:
-                                   if target not in Saints:
+                                   if target not in Goblok:
                                        try:
                                            admin.remove(target)
                                            cl.sendMessage(msg.to,"Berhasil menghapus admin")
@@ -2659,7 +2659,7 @@ def bot(op):
                                for x in key["MENTIONEES"]:
                                     targets.append(x["M"])
                                for target in targets:
-                                   if target not in Saints:
+                                   if target not in Goblok:
                                        try:
                                            staff.remove(target)
                                            cl.sendMessage(msg.to,"Berhasil menghapus admin")
@@ -2674,7 +2674,7 @@ def bot(op):
                                for x in key["MENTIONEES"]:
                                     targets.append(x["M"])
                                for target in targets:
-                                   if target not in Saints:
+                                   if target not in Goblok:
                                        try:
                                            Bots.remove(target)
                                            cl.sendMessage(msg.to,"Berhasil menghapus admin")
