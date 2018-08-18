@@ -402,44 +402,49 @@ def help():
 def helpbot():
     key = Setmain["keyCommand"]
     key = key.title()
-    helpMessage1 = "╠══════════════" + "\n" + \
-                   "╚═╗" + "\n" + \
-                   "  ╠➣ [ Blacklist command ]" + "\n" + \
-                   "╔═╝" + "\n" + \
-                  ™[ Selfbot Blacklist ]™\n   Jangan gunakan「 " + key + " 」di depannya\n\n" + \
-                  "™↔ " + key + "Blc\n" + \
-                  "™↔ " + key + "Ban:on\n" + \
-                  "™↔ " + key + "Unban:on\n" + \
-                  "™↔ " + key + "Ban「@」\n" + \
-                  "™↔ " + key + "Unban「@」\n" + \
-                  "™↔ " + key + "Talkban「@」\n" + \
-                  "™↔ " + key + "Untalkban「@」\n" + \
-                  "™↔ " + key + "Talkban:on\n" + \
-                  "™↔ " + key + "Untalkban:on\n" + \
-                  "™↔ " + key + "Banlist\n" + \
-                  "™↔ " + key + "Talkbanlist\n" + \
-                  "™↔ " + key + "Clearban\n" + \
-                  "™↔ " + key + "Refresh\n" + \
-                  "\n™[ Selfbot Menu ]™\n    Gunakan「 " + key + " 」di depannya\n" + \
-                  "™↔ " + key + "Cek sider\n" + \
-                  "™↔ " + key + "Cek spam\n" + \
-                  "™↔ " + key + "Cek pesan \n" + \
-                  "™↔ " + key + "Cek respon \n" + \
-                  "™↔ " + key + "Cek welcome\n" + \
-                  "™↔ " + key + "Set sider:「Text」\n" + \
-                  "™↔ " + key + "Set spam:「Text」\n" + \
-                  "™↔ " + key + "Set pesan:「Text」\n" + \
-                  "™↔ " + key + "Set respon:「Text」\n" + \
-                  "™↔ " + key + "Set welcome:「Text」\n" + \
-                  "™↔ " + key + "Myname:「Nama」\n" + \
-                  "™↔ " + key + "Bot1name:「Nama」\n" + \
-                  "™↔ " + key + "Bot2name:「Nama」\n" + \
-                  "™↔ " + key + "Bot3name:「Nama」\n" + \
-                  "™↔ " + key + "Bot1up「Kirim fotonya」\n" + \
-                  "™↔ " + key + "Bot2up「Kirim fotonya」\n" + \
-                  "™↔ " + key + "Bot3up「Kirim fotonya」\n" + \
-                  "™↔ " + key + "Gift:「Mid korban」「Jumlah」\n" + \
-                  "™↔ " + key + "Spam:「Mid korban」「Jumlah」\n" + \
+    helpMessage1 ="╠══════════════" + "\n" + \
+                  "╚═╗" + "\n" + \
+                  "  ╠➣ [ Blacklist command ]" + "\n" + \
+                  "╔═╝" + "\n" + \
+                  "╠➣[ Selfbot Blacklist ]
+                  "╠➣ Jangan gunakan「 " + key + " 」\n" + \
+                  "╠➣ " + key + "Blc\n" + \
+                  "╠➣ " + key + "Ban:on\n" + \
+                  "╠➣ " + key + "Unban:on\n" + \
+                  "╠➣ " + key + "Ban「@」\n" + \
+                  "╠➣ " + key + "Unban「@」\n" + \
+                  "╠➣ " + key + "Talkban「@」\n" + \
+                  "╠➣ " + key + "Untalkban「@」\n" + \
+                  "╠➣ " + key + "Talkban:on\n" + \
+                  "╠➣ " + key + "Untalkban:on\n" + \
+                  "╠➣ " + key + "Banlist\n" + \
+                  "╠➣ " + key + "Talkbanlist\n" + \
+                  "╠➣ " + key + "Clearban\n" + \
+                  "╠➣ " + key + "Refresh\n" + \
+                  "╚═╗" + "\n" + \
+                  "  ╠➣ [ Self Command ]" + "\n" + \
+                  "╔═╝" + "\n" + \
+                  "╠➣ Gunakan「 " + key + " 」\n" + \
+                  "╠➣ " + key + "Cek sider\n" + \
+                  "╠➣ " + key + "Cek spam\n" + \
+                  "╠➣ " + key + "Cek pesan \n" + \
+                  "╠➣ " + key + "Cek respon \n" + \
+                  "╠➣ " + key + "Cek welcome\n" + \
+                  "╠➣ " + key + "Set sider:「Text」\n" + \
+                  "╠➣ " + key + "Set spam:「Text」\n" + \
+                  "╠➣ " + key + "Set pesan:「Text」\n" + \
+                  "╠➣ " + key + "Set respon:「Text」\n" + \
+                  "╠➣ " + key + "Set welcome:「Text」\n" + \
+                  "╠➣ " + key + "Myname:「Nama」\n" + \
+                  "╠➣ " + key + "Bot1name:「Nama」\n" + \
+                  "╠➣ " + key + "Bot2name:「Nama」\n" + \
+                  "╠➣ " + key + "Bot3name:「Nama」\n" + \
+                  "╠➣ " + key + "Bot1up「Kirim fotonya」\n" + \
+                  "╠➣ " + key + "Bot2up「Kirim fotonya」\n" + \
+                  "╠➣ " + key + "Bot3up「Kirim fotonya」\n" + \
+                  "╠➣ " + key + "Gift:「Mid korban」「Jumlah」\n" + \
+                  "╠➣ " + key + "Spam:「Mid korban」「Jumlah」\n" + \
+                  "╚════════════════════╝\n" + \
                   "\nKetik「 Refresh 」jika sudah\nmenggunakan command\n"
     return helpMessage1
 
